@@ -1,7 +1,6 @@
-
 # 📡 Passive Aircraft Geolocation from Iridium ACARS
 
-**Extract aircraft positions from Iridium SBD messages**
+**Extract aircraft positions from Iridium SBD messages — no RF physics required**
 
 ---
 
@@ -44,7 +43,7 @@ Iridium + ACARS already carries **position-bearing information**:
 
 ## 🏗️ Pipeline Overview
 
-![Pipeline Diagram](pipeline.png)
+![Pipeline Diagram](docs/pipeline.png)
 
 ```
 RF Capture → Burst Decode → SBD Reassembly → Content Extraction → Position Resolution
@@ -54,9 +53,21 @@ RF Capture → Burst Decode → SBD Reassembly → Content Extraction → Positi
 
 ## 🗺️ Navigation Database
 
-- Full FAA navigation database included
+This project includes a **full FAA navigation database**:
+
 - ~100,000+ fixes and NAVAIDs
+- VOR / VORTAC / NDB / intersections
 - Enables near-complete waypoint resolution
+
+### 📌 Data Attribution
+
+The navigation dataset is derived from publicly available FAA aeronautical data (CIFP and related sources).
+
+- Source: FAA (Federal Aviation Administration)
+- Format: Parsed into JSON for fast lookup
+- Use: Waypoint → coordinate resolution
+
+This repository includes a processed subset suitable for geolocation purposes.
 
 ---
 
@@ -64,21 +75,20 @@ RF Capture → Burst Decode → SBD Reassembly → Content Extraction → Positi
 
 ### Hardware
 - HackRF One / Airspy R2 (or similar)
-- L-band antenna + LNA
+- L-band antenna + LNA recommended
 
 ### Software
-- gr-iridium + iridium-toolkit  or
+- gr-iridium
 - iridium-sniffer
-- Python 3
+- iridium-toolkit
+- Python 3 (no external dependencies)
 
 ---
 
 ## ▶️ Quick Start
 
 ```bash
-iridium-sniffer ... | python3 iridium-parser.py \
-  | tee output.parsed \
-  | python3 reassembler.py -m acars > output.acars
+iridium-sniffer ... | python3 iridium-parser.py   | tee output.parsed   | python3 reassembler.py -m acars > output.acars
 
 grep 'IDA:.*UL' output.parsed > output_parsed.ul
 
@@ -87,13 +97,63 @@ python3 sbd_mo_pipeline_v2.py output_parsed.ul
 
 ---
 
+## 🧪 Demo Output
+
+Sample run from the v2 pipeline using a synthetic test dataset:
+
+```text
+SBD MO Pipeline v2
+  UL IDA frames     : 66
+  NAVAID database   : 73540 fixes loaded
+  Sessions          : 25
+
+  Content extraction:
+    Aircraft registrations : 12
+    Geographic coordinates : 1
+    Waypoint routes        : 4
+      Resolved positions   : 9
+    NMEA sentences         : 0
+    METAR/TAF/NOTAM/PIREP  : 3
+    REQPOS requests        : 1
+    Performance data       : 0
+    Freetext messages      : 9
+```
+
+### Example: waypoint route extraction
+
+```text
+Session 00001  [multi]  2026-04-05 19:00:00 UTC
+  Aircraft  : N710CK
+  ACARS Lbl : H1
+  Route     : MDZUN(282/046) → PYRIT(283/046) → MUMTE(298/054) → DRK(291/053)
+```
+
+### Example: direct coordinate from NOTAM
+
+```text
+Session 00004
+  *** POSITION: 36.827889°, -76.251806°
+  NOTAM OBST LT 364940.40N0761506.5W TWR CRANE
+```
+
+### Example: freetext / operational message
+
+```text
+Session 00007
+  "Alrighty I hope he approves of it, would be a bummer to drive it all the way back"
+```
+
+---
+
 ## 📊 What Gets Extracted
 
-- Aircraft registrations
-- Waypoint routes
-- Geographic coordinates
-- Weather products
-- Performance data
+- ✈️ Aircraft registrations
+- 🧭 Waypoint routes (H1 position reports)
+- 📍 Geographic coordinates (NOTAM, ADS-C)
+- 📡 REQPOS requests/responses
+- 🌦️ METAR / TAF / NOTAM / PIREP
+- 🛬 Performance data
+- 💬 Freetext / dispatch messages
 
 ---
 
@@ -104,22 +164,35 @@ python3 sbd_mo_pipeline_v2.py output_parsed.ul
 | ACARS decode | ✅ | ✅ |
 | Payload interpretation | ❌ | ✅ |
 | Aircraft position | ❌ | ✅ |
+| Accuracy | N/A | ~1–5 NM |
 
 ---
 
 ## ⚠️ Limitations
 
-- ADS-C extraction pending
+- ADS-C extraction not yet implemented
 - UL/DL direction not tracked
-- Track stitching incomplete
+- Registration correlation incomplete
+- Track stitching across sessions is limited
 
 ---
 
 ## 🛣️ Roadmap
 
-- ADS-C decoding
-- Track stitching
-- Toolkit plugin
+- [ ] ADS-C decoding (libacars integration)
+- [ ] UL/DL direction tagging
+- [ ] Temporal track stitching
+- [ ] Satellite footprint fusion
+- [ ] iridium-toolkit plugin mode (`-m geo`)
+- [ ] Optional real-time visualization integration
+
+---
+
+## 💡 Philosophy
+
+> Signals carry data  
+> Data carries meaning  
+> Meaning carries location  
 
 ---
 
@@ -131,4 +204,6 @@ MIT License
 
 ## 📣 Author
 
-Mike (@ElbaSatGuy)
+**Mike (@ElbaSatGuy)**
+
+---
