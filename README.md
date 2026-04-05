@@ -97,7 +97,7 @@ python3 sbd_mo_pipeline_v2.py output_parsed.ul
 
 ---
 
-## 🧪 Demo Output
+## 🧪 Example Output
 
 Sample run from the v2 pipeline using a synthetic test dataset:
 
@@ -120,6 +120,9 @@ SBD MO Pipeline v2
 ```
 
 ### Example: waypoint route extraction
+![PoC Route Reconstruction](poc_route.png)
+
+Westbound track reconstructed from ACARS waypoint reports (N710CK) using Iridium SBD data.
 
 ```text
 Session 00001  [multi]  2026-04-05 19:00:00 UTC
