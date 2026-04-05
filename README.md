@@ -43,7 +43,7 @@ Iridium + ACARS already carries **position-bearing information**:
 
 ## 🏗️ Pipeline Overview
 
-![Pipeline Diagram](docs/pipeline.png)
+![Pipeline Diagram](pipeline.png)
 
 ```
 RF Capture → Burst Decode → SBD Reassembly → Content Extraction → Position Resolution
@@ -204,6 +204,6 @@ MIT License
 
 ## 📣 Author
 
-**Mike (@ElbaSatGuy)**
+**Mike Brown (@ElbaSatGuy)**
 
 ---
