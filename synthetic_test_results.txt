@@ -1,0 +1,262 @@
+
+SBD MO Pipeline v2
+  Capture start : 2026-04-05 19:00:00 UTC
+  UL IDA frames : 66
+  NAVAID database: 73540 fixes loaded
+  Sessions      : 25  (10 multi-fragment, 0 with MOMSN)
+
+  Content extraction:
+    Aircraft registrations : 12
+    Geographic coordinates : 1
+    Waypoint routes        : 4
+      Resolved positions   : 9  (4 unresolved)
+    NMEA sentences         : 0
+    METAR/TAF/NOTAM/PIREP  : 3
+    REQPOS requests        : 1
+    Performance data       : 0
+    Freetext messages      : 9
+
+────────────────────────────────────────────────────────────────────────
+Session 00001  [multi]  2026-04-05 19:00:00 UTC  sat=(-55.00, -112.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1625.1317 MHz
+  Fragments : 6  |  Total bytes: 114
+  SBD Header: 76082658  type=acars_bearer
+  Aircraft  : N710CK
+  ACARS Lbl : H1
+  Route     : MDZUN(282/046) → PYRIT(283/046) → MUMTE(298/054) → DRK(291/053)
+  Payload   : 760826580a02005d851087010103fc01010000000132aeceb7b1b0c3cb15c8b102ada0a3cdc4b781...
+
+────────────────────────────────────────────────────────────────────────
+Session 00002  [multi]  2026-04-05 19:00:05 UTC  sat=(-52.00, -105.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1623.2455 MHz
+  Fragments : 6  |  Total bytes: 110
+  SBD Header: 76082658  type=acars_bearer
+  ACARS Lbl : H1
+  Route     : MDSJI(253/102) → MCB(252/111) → FUZ(255/105) → ABQ(263/046)
+  Payload   : 760826580a02005d851087010103fc01010000000132aec3c3adc3d8c515c8b102ada0a3cdc4b781...
+
+────────────────────────────────────────────────────────────────────────
+Session 00003  [multi]  2026-04-05 19:00:11 UTC  sat=(-60.00, -107.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1622.7984 MHz
+  Fragments : 6  |  Total bytes: 101
+  SBD Header: 76082658  type=acars_bearer
+  Aircraft  : N8994Q
+  ACARS Lbl : H1
+  Route     : DMIERA(265/054) → HUDAD(258/097) → TXO(257/079)
+  Payload   : 760826580a02005d851087010103fc01010000000132aeceb8b9b9b4d115c8b102ada0a3cdc4b781...
+
+────────────────────────────────────────────────────────────────────────
+Session 00004  [multi]  2026-04-05 19:00:16 UTC  sat=(-63.00, -95.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1620.8814 MHz
+  Fragments : 3  |  Total bytes: 44
+  Aircraft  : NOTAM
+  *** POSITION: 36.827889°, -76.251806°  (raw: 364940.40N0761506.5W)
+  Weather   : NOTAM 
+              NOTAM OBST LT 364940.40N0761506.5W TWR CRANE
+  Payload   : cecfd4c1cda0cfc2d3d4a0ccd4a0b3b6b4b9b4b0aeb4b0ceb0b7b6b1b5b0b6aeb5d7a0d4d7d2a0c3...
+
+────────────────────────────────────────────────────────────────────────
+Session 00005  [multi]  2026-04-05 19:00:22 UTC  sat=(-53.00, -113.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1619.5063 MHz
+  Fragments : 3  |  Total bytes: 48
+  SBD Header: 76082658  type=acars_bearer
+  Aircraft  : N985JT
+  ACARS Lbl : H1
+  *** REQPOS: Position request (ID: 037)
+  Payload   : 760826580a02005d851087010103fc01010000000132aeceb9b8b5cad415c8b102ada0a3cdc4d2c5...
+
+────────────────────────────────────────────────────────────────────────
+Session 00006  [multi]  2026-04-05 19:00:27 UTC  sat=(-58.00, -102.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1618.7004 MHz
+  Fragments : 10  |  Total bytes: 195
+  SBD Header: 76082658  type=acars_bearer
+  Aircraft  : C-FSNU
+  ACARS Lbl : 4P
+  Text      : v&X
+]|2.C-FSNU4POAT  29      NON-NORM NO  
+QNH  29.93   SPDCOR AUTO  
+----- KMIA/MIA 09 ------  
+LDA  11397
+  Payload   : 760826580a02005d851087010103fc01010000000132aec3adc6d3ced515b4d002cfc1d4a0a0b2b9...
+
+────────────────────────────────────────────────────────────────────────
+Session 00007  [multi]  2026-04-05 19:00:33 UTC  sat=(-54.00, -104.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1622.8942 MHz
+  Fragments : 6  |  Total bytes: 104
+  SBD Header: 76082611  type=acars_bearer
+  Text      : v&1*h]~S R@Alrighty I hope he approves of it, would be a bummer to drive it all the way back
+  Payload   : 760826113101002ae8105d017ed300000820000152408b416c726967687479204920686f70652068...
+
+────────────────────────────────────────────────────────────────────────
+Session 00008  [multi]  2026-04-05 19:00:39 UTC  sat=(-56.00, -106.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1621.3456 MHz
+  Fragments : 3  |  Total bytes: 60
+  Aircraft  : N100
+  Weather   : METAR KONX
+              METAR KONX 051500Z 18012G20KT 10SM SCT050 BKN100 28/22 A2990
+  Payload   : cdc5d4c1d2a0cbcfced8a0b0b5b1b5b0b0daa0b1b8b0b1b2c7b2b0cbd4a0b1b0d3cda0d3c3d4b0b5...
+
+────────────────────────────────────────────────────────────────────────
+Session 00009  [multi]  2026-04-05 19:00:44 UTC  sat=(-51.00, -108.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1623.3400 MHz
+  Fragments : 3  |  Total bytes: 50
+  Weather   : TAF KECG
+              TAF AMD KECG 181851Z 1819/1918 VRB06KT P6SM FEW050
+  Payload   : d4c1c6a0c1cdc4a0cbc5c3c7a0b1b8b1b8b5b1daa0b1b8b1b9afb1b9b1b8a0d6d2c2b0b6cbd4a0d0...
+
+────────────────────────────────────────────────────────────────────────
+Session 00010  [single]  2026-04-05 19:00:52 UTC  sat=(-53.00, -109.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1624.5000 MHz
+  Fragments : 1  |  Total bytes: 17
+  Aircraft  : N454AJ
+  Payload   : 0132aeceb4b5b4c1cab6df7fce834d077f
+
+────────────────────────────────────────────────────────────────────────
+Session 00011  [single]  2026-04-05 19:00:55 UTC  sat=(-53.00, -109.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1624.5000 MHz
+  Fragments : 1  |  Total bytes: 16
+  Aircraft  : N500M
+  Payload   : 0132aeceb5b0b0cdb6df7fce834d077f
+
+────────────────────────────────────────────────────────────────────────
+Session 00012  [single]  2026-04-05 19:00:58 UTC  sat=(-53.00, -109.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1624.5000 MHz
+  Fragments : 1  |  Total bytes: 17
+  Aircraft  : N593NW
+  Payload   : 0132aeceb5b9b3ced7b6df7fce834d077f
+
+────────────────────────────────────────────────────────────────────────
+Session 00013  [single]  2026-04-05 19:01:01 UTC  sat=(-53.00, -109.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1624.5000 MHz
+  Fragments : 1  |  Total bytes: 17
+  Aircraft  : N8757L
+  Payload   : 0132aeceb8b7b5b7ccb6df7fce834d077f
+
+────────────────────────────────────────────────────────────────────────
+Session 00014  [single]  2026-04-05 19:01:04 UTC  sat=(-53.00, -109.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1624.5000 MHz
+  Fragments : 1  |  Total bytes: 16
+  Aircraft  : N879D
+  Payload   : 0132aeceb8b7b9c4b6df7fce834d077f
+
+────────────────────────────────────────────────────────────────────────
+Session 00025  [multi]  2026-04-05 19:01:22 UTC  sat=(-57.00, -104.00)
+  Source    : p-1775415600-e000  antenna=e000
+  Frequency : 1623.5750 MHz
+  Fragments : 5  |  Total bytes: 88
+  SBD Header: 76082658  type=acars_bearer
+  Aircraft  : N417AN
+  ACARS Lbl : H1
+  Route     : DCABLO(254/100) → GWAVA(278/068)
+  Payload   : 760826580a02005d851087010103fc01010000000132aeceb4b1b7c1ce15c8b102ada0a3cdc4b781...
+
+
+  (Displayed 15 sessions with content out of 25 total)
+  (Use --verbose / -v to show all sessions)
+
+════════════════════════════════════════════════════════════════════════
+AIRCRAFT CATALOG
+────────────────────────────────────────────────────────────────────────
+  Registration  Sessions  Labels        Waypoints  Positions  Notes
+────────────────────────────────────────────────────────────────────────
+  C-FSNU               1  4P                0      0  
+  N100                 1  -                 0      0  WX:METAR
+  N417AN               1  H1                2      0  
+  N454AJ               1  -                 0      0  
+  N500M                1  -                 0      0  
+  N593NW               1  -                 0      0  
+  N710CK               1  H1                4      0  
+  N8757L               1  -                 0      0  
+  N879D                1  -                 0      0  
+  N8994Q               1  H1                3      0  
+  N985JT               1  H1                0      0  
+  NOTAM                1  -                 0      1  WX:NOTAM
+────────────────────────────────────────────────────────────────────────
+  Total aircraft: 12
+
+
+════════════════════════════════════════════════════════════════════════
+POSITION FIXES
+────────────────────────────────────────────────────────────────────────
+  Sess     4  19:00:16  NOTAM        36.827889°  -76.251806°  sat=(-63.0, -95.0)
+                              raw: 364940.40N0761506.5W
+
+  Resolved waypoint positions: 9
+
+  REQPOS (position requests):
+    Sess     5  N985JT
+────────────────────────────────────────────────────────────────────────
+
+
+════════════════════════════════════════════════════════════════════════
+WAYPOINT ROUTES
+────────────────────────────────────────────────────────────────────────
+
+  ?  (1 route segments):
+    MDSJI     brg 253°  dist 102 nm  ->  (unresolved)
+    MCB       brg 252°  dist 111 nm  ->   30.7170°,  -92.3035°
+    FUZ       brg 255°  dist 105 nm  ->   32.4209°,  -99.1806°
+    ABQ       brg 263°  dist  46 nm  ->   34.9469°, -107.7437°
+
+  N417AN  (1 route segments):
+    DCABLO    brg 254°  dist 100 nm  ->  (unresolved)
+    GWAVA     brg 278°  dist  68 nm  ->   25.4190°,  -81.2072°
+
+  N710CK  (1 route segments):
+    MDZUN     brg 282°  dist  46 nm  ->  (unresolved)
+    PYRIT     brg 283°  dist  46 nm  ->   35.0385°, -111.4232°
+    MUMTE     brg 298°  dist  54 nm  ->   35.1430°, -114.0358°
+    DRK       brg 291°  dist  53 nm  ->   35.0148°, -113.4862°
+
+  N8994Q  (1 route segments):
+    DMIERA    brg 265°  dist  54 nm  ->  (unresolved)
+    HUDAD     brg 258°  dist  97 nm  ->   33.2642°, -101.3221°
+    TXO       brg 257°  dist  79 nm  ->   34.1893°, -104.3900°
+────────────────────────────────────────────────────────────────────────
+
+
+════════════════════════════════════════════════════════════════════════
+PAYLOAD STATISTICS
+────────────────────────────────────────────────────────────────────────
+  Total sessions: 25
+
+  Length distribution:
+     16 bytes:      2  
+     17 bytes:      3  
+     24 bytes:     10  
+     44 bytes:      1  
+     48 bytes:      1  
+     50 bytes:      1  
+     60 bytes:      1  
+     88 bytes:      1  
+    101 bytes:      1  
+    104 bytes:      1  
+    110 bytes:      1  
+    114 bytes:      1  
+    195 bytes:      1  
+
+  23-byte payloads: 0 total, 0 unique patterns
+  (These are likely periodic status/registration frames)
+────────────────────────────────────────────────────────────────────────
+
+════════════════════════════════════════════════════════════════════════
+MOMSN SEQUENCE TABLE
+────────────────────────────────────────────────────────────────────────
+ Sess   MOMSN    Type         Timestamp (UTC)  Sat position
+────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────
+
